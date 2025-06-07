@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.game-container {
+    background: #2c3e50;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    max-width: 320px;
+    width: 100%;
+    text-align: center;
+}
+
+.game-header {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.score-display {
+    color: #2ecc71;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    font-family: 'Courier New', monospace;
+    letter-spacing: 1px;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 40px);
+    grid-template-rows: repeat(5, 40px);
+    gap: 3px;
+    justify-content: center;
+    margin-bottom: 20px;
+    background: #34495e;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    background: #4a6b7c;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 20px;
+    border: 1px solid #5a7c8d;
+}
+
+.cell:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.cell.revealed {
+    cursor: default;
+    transform: none;
+}
+
+.cell.money {
+    background: #27ae60;
+    border-color: #2ecc71;
+}
+
+.cell.money i {
+    font-size: 22px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.cell.bomb {
+    background: #8B2635;
+    border-color: #c0392b;
+}
+
+.cell.bomb i {
+    font-size: 22px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.withdraw-btn {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: background 0.3s ease;
+}
+
+.withdraw-btn:hover {
+    background: #219a52;
+}
+
+.withdraw-btn:disabled {
+    background: #7f8c8d;
+    cursor: not-allowed;
+}
+
